@@ -148,10 +148,6 @@ header {
     color: white;
 }
 
-#search-input + :focus {
-    border: 1px solid #1ca9c9;
-}
-
 /* Hidden search menu ends */
 
 .button-left {
