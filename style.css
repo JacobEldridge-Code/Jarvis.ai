@@ -63,10 +63,6 @@ header {
     border: 1px solid darkgray;
 }
 
-.middle-btn:hover {
-    border: 1px solid grey;
-}
-
 .middle-btn img {
     width: 20px;
 }
@@ -247,6 +243,33 @@ header {
     width: 35rem;
 }
 
+.label-1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.group-1 {
+    display: flex;
+}
+
+.label-img {
+    width: 70px;
+}
+
+.label-1-text {
+    line-height: 1.8;
+}
+
+.top-text {
+    color: white;
+}
+
+.bottom-text {
+    color: var(--color);
+    opacity: 70%;
+}
 
 
 
