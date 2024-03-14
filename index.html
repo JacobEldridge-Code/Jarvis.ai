@@ -8,17 +8,17 @@
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/c1b15e9f35.js" crossorigin="anonymous"></script>
 
-    <link rel="icon" type="image/x-icon" href="/Jarvis.ai-1/assets/jarvis.png">
+    <link rel="icon" type="image/x-icon" href="assets/jarvis.png">
 </head>
 
 <body>
     <div id="background">
         <header>
-            <img class="header-icon" src="/Jarvis.ai/assets/jarvis.png" alt="jarvis icon image" loading="lazy" title="jarvis icon image">
+            <img class="header-icon" src="/Jarvis.ai-1/assets/jarvis.png" alt="jarvis icon image" loading="lazy" title="jarvis icon image">
             <div class="header-middle">
                 <button class="middle-btn" type="button">
                     <div class="button-left">
-                        <img src="/Jarvis.ai/assets/search.png" alt="search icon" loading="lazy" title="search icon">
+                        <img src="/Jarvis.ai-1/assets/search.png" alt="search icon" loading="lazy" title="search icon">
                         <span class="middle-span">Search docs</span>
                     </div>
                         <p>Ctrl K</p>
@@ -29,9 +29,28 @@
                 <div class="hidden-search-menu-top">
                     <div class="searchbar-wrapper">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="search-input">
+                        <input type="text" id="search-input" placeholder="Search docs">
                     </div>
-                        <span>Cancel</span>
+                        <span id="cancel-btn">Cancel</span>
+                </div>
+                <div class="search-menu-middle">
+                    <span>No recent searches</span>
+                </div>
+                <div class="search-menu-bottom">
+                    <div class="search-options">
+                        <div class="to-select">
+                            <i class="fa-solid fa-arrow-left"></i> <span>to select</span>
+                        </div>
+                        <div class="to-navigate">
+                            <i class="fa-solid fa-arrow-down"></i>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span>to navigate</span>
+                        </div>
+                        <div class="to-close">
+                            <span class="escape-icon">esc</span>
+                            <span>to close</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -56,8 +75,8 @@
 
             <div class="landing-right">
                 <div class="label-1">
-                    <div class="group">
-                    <img class="label-img" src="/Jarvis.ai/assets/image (1).png" alt="small image icon" loading="lazy">
+                    <div class="group-1">
+                    <img class="label-img" src="/Jarvis.ai-1/assets/image.png" alt="small image icon" loading="lazy">
                     <div class="label-1-text">
                         <p class="top-text">Generate artistic logos, QR codes, & messages</p>
                         <p class="bottom-text">Use ControlNet models on the Stable Diffusion UI.</p>
