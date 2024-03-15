@@ -16,8 +16,9 @@
 /* Need to find better background color */ 
 
 #background {
-    background-color:#06132b;
+    background: #171B23;
     height: 100vh;
+    z-index: 50;
 }
 
 /* Header section */
@@ -30,16 +31,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 90px;
+    padding: 10px 50px;
+    z-index: 10;
 }
 
 .header-icon {
-    width: 150px;
+    width: 120px;
     cursor: pointer;
 }
 
 .header-middle {
-    padding-left: 200px;
+    padding-left: 240px;
 }
 
 .middle-btn {
@@ -238,13 +240,24 @@ header {
 /* top content of the home page */
 
 .landing-top {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     text-align: left;
-    margin-top: 90px;
-    gap: 120px;
+    margin-top: 80px;
+    padding: 0px 100px;
 }
+
+.blur {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    transform: translate(-50%, -50%);
+    width: 450px;
+}
+
+/* left side of the top content of the home page */ 
 
 .landing-left {
     display: flex;
@@ -262,7 +275,7 @@ header {
 .landing-left p {
     color: var(--color);
     opacity: 1;
-    line-height: 2;
+    line-height: 1.7;
     font-size: 23px;
 }
 
@@ -283,30 +296,30 @@ header {
     color: #0dbfe7;
 }
 
+/* right side of the top content of the home page */ 
+
 .landing-right {
     display: flex;
     flex-direction: column;
-    width: 32rem;
-    background-color:#1e293b ;
+    width: 35rem;
+    background-color: #171B23;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
 }
-
-/* .label-1 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 1px solid red;
-} */
 
 .group {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px;
+    padding: 15px 20px;
     gap: 10px;
 }
 
 .label-img {
-    width: 40px;
+    width: 50px;
+    padding: 10px;
+    background-color: #1e293b;
+    border-radius: 5px;
 }
 
 .label-1-text {
@@ -329,6 +342,15 @@ header {
     width: 30px;
     padding-bottom: 40px;
     margin-left: 10px;
+}
+
+
+
+/* Section 2 begins */
+
+#section2 {
+    height: 90vh;
+    background-color: #1e293b;
 }
 
 
