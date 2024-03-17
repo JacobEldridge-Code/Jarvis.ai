@@ -66,13 +66,13 @@ header {
     color: var(--color);
     opacity: 1;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid rgba(169, 169, 169, 0.129);
     font-size: 14px;
     transition: 0.1s ease-in-out;
 }
 
 .middle-btn:hover {
-    border: 1px solid darkgray;
+    border: 1px solid rgba(156, 162, 168, 0.677);
 }
 
 .middle-btn img {
@@ -409,7 +409,7 @@ header {
 .scroller-inner {
     display: flex;
     gap: 1.5rem;
-    animation: scrolling 25s infinite linear;
+    animation: scrolling 25s linear 0s infinite normal none running;
 }
 
 @keyframes scrolling {
