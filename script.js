@@ -47,8 +47,3 @@ let toggleBlur = () => {
     blur.classList.toggle("active");
 }
 //blur effect ends
-
-
-
-
-
