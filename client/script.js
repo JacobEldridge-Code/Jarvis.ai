@@ -50,7 +50,7 @@ let toggleBlur = () => {
 
 //group click event
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     let groups = document.querySelectorAll('.group');
 
     groups.forEach(function(group) {
@@ -59,14 +59,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-/* 
-
-.vercel
-assets
-client
-jarvis.ai
-.gitignore
-vercel.json
-
-*/
