@@ -59,3 +59,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+/* 
+
+.vercel
+assets
+client
+jarvis.ai
+.gitignore
+vercel.json
+
+*/
