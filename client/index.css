@@ -68,13 +68,13 @@ header {
     color: var(--color);
     opacity: 1;
     cursor: pointer;
-    border: 1px solid red solid rgba(169, 169, 169, 0.129);
+    border: 1px solid rgba(169, 169, 169, 0.129);
     font-size: 14px;
     transition: 0.1s ease-in-out;
 }
 
 .middle-btn:hover {
-    border: 1px solid red solid rgba(156, 162, 168, 0.677);
+    border: 1px solid rgba(156, 162, 168, 0.677);
 }
 
 .middle-btn img {
@@ -129,7 +129,7 @@ header {
 
 #hidden-search-menu {
     z-index: 9999;
-    position: absolute;
+    position: relative;
     top: 12rem;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -142,7 +142,7 @@ header {
     color: white;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid red solid rgba(128, 128, 128, 0.496);
+    border: 1px solid rgba(128, 128, 128, 0.496);
 }
 
 #hidden-search-menu.active {
@@ -176,7 +176,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid red solid rgba(128, 128, 128, 0.496);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.496);
     gap: 2px;
     padding-right: 16px;
 }
@@ -186,7 +186,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 35rem;
-    border: 1px solid red solid gray;
+    border: 1px solid gray;
     border-top-left-radius: 12px;
 }
 
@@ -199,15 +199,15 @@ header {
 }
 
 .hidden-search-menu-top > span {
-    color: rgb(167, 167, 167);
+    color: rgba(173, 211, 255, 0.622);
     padding: 3px;
     border-radius: 8px;
-    background: #4e62864c;
+    background: #4e628631;
     font-size: 13px;
 }
 
 .hidden-search-menu-top > span:hover{
-    background: #4e628685;
+    background: #4e62865d;
     cursor: pointer;
 }
 
@@ -415,7 +415,7 @@ header {
 .scroller-inner {
     display: flex;
     gap: 1.5rem;
-    animation: scrolling 25s linear 0s infinite normal none running;
+    animation: scrolling 30s linear 0s infinite normal none running;
 }
 
 @keyframes scrolling {
@@ -432,7 +432,7 @@ header {
     background: #1e293b65;
     padding: 15px;
     height: fit-content;
-    border: 1px solid red solid #34466396;
+    border: 1px solid #34466396;
     border-radius: 12px;
 }
 
@@ -448,7 +448,7 @@ header {
 .card-avi {
     width: 4rem;
     border-radius: 50px;
-    border: 1px solid red solid #1e293b35;
+    border: 1px solid #1e293b35;
 }
 
 .card-top > h3 > span {
@@ -738,32 +738,22 @@ header {
     }
 
     #hidden-search-menu {
+        position: relative;
         z-index: 9999;
-        height: 100%;
-        width: 100%;
+        position: fixed; 
+        top: 1.5rem; 
+        height: 200vh;  
+        width: 100vw; 
         display: none;
-        align-items: start;
+        align-items: center;
         justify-content: center;
         background-color: #1e293b;
         color: white;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(128, 128, 128, 0.496);
+        
     }
     
     #hidden-search-menu.active {
         display: flex;
-    }
-    
-    #blur-overlay {
-        display: none;
-        position: fixed;
-        z-index: 100;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        backdrop-filter: blur(10px);
     }
     
     #blur-overlay.active {
@@ -779,10 +769,9 @@ header {
         border: none;
         width: 100%;
         height: 3rem;
-        display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid red solid rgba(128, 128, 128, 0.496);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.496);
         gap: 2px;
         padding-right: 16px;
     }
@@ -791,9 +780,8 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 35rem;
-        border: 1px solid red solid gray;
-        border-top-left-radius: 12px;
+        border: 1px solid gray;
+        border-radius: 0;
     }
     
     .searchbar-wrapper.focused {
@@ -805,15 +793,14 @@ header {
     }
     
     .hidden-search-menu-top > span {
-        color: rgb(167, 167, 167);
-        padding: 3px;
-        border-radius: 8px;
-        background: #4e62864c;
+        color: rgba(173, 211, 255, 0.622);
+        padding: 5px;
+        background: #4e628631;
         font-size: 13px;
     }
     
     .hidden-search-menu-top > span:hover{
-        background: #4e628685;
+        background: #4e62869f;
         cursor: pointer;
     }
     
@@ -833,7 +820,7 @@ header {
     .search-menu-middle {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 54%;
         transform: translate(-50%, -50%);
         color: var(--color);
     }
@@ -842,8 +829,8 @@ header {
     .search-menu-bottom {
         white-space: nowrap;
         position: absolute;
-        bottom: 0;
-        border-top: 1px solid red solid rgba(128, 128, 128, 0.496);
+        bottom: 2rem;
+        border-top: 1px solid rgba(128, 128, 128, 0.496);
         width: 100%;
     }
     
@@ -851,10 +838,9 @@ header {
         font-size: 13px;
         color: var(--color);
         display: flex;
-        justify-content: start;
+        justify-content: end;
         align-items: center;
-        height: 2.9rem;
-        width: 22rem;
+        width: 100%;
         gap: 1.5rem;
         padding: 20px;
     }
