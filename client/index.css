@@ -22,6 +22,7 @@ body {
     align-items: center;
     justify-content: center;
     background: #171B23;
+    overflow-x: hidden;
 }
 
 /* Need to find better background color */ 
@@ -285,7 +286,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12rem;
+    gap: 10rem;
     text-align: left;
     margin-top: 80px;
     padding: 0px 100px;
@@ -305,11 +306,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 35rem;
+    width: 36rem;
 }
 
 .landing-left h2 {
-    font-size: 42px;
+    font-size: 46px;
     line-height: 1.2;
     color: cyan;
     background: linear-gradient(to right, #02e180, cyan);
@@ -357,7 +358,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+    padding: 18px 20px;
     gap: 10px;
 }
 
@@ -515,9 +516,72 @@ header {
 /* Section 2 begins */
 
 #radically {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 90vh;
     background-color: #071630;
     width: 100%;
+    gap: 10rem;
+}
+
+.radically-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+    margin-left: 130px;
+}
+
+.radically-left p:nth-child(1) {
+    color: #0dbfe7;
+    font-size: 18px;
+}
+
+.radically-left h2 {
+    color: white;
+    font-size: 44px;
+}
+
+.radically-left p:nth-child(3) {
+    color: grey;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.radically-left-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    width: 31rem;
+    gap: 2rem;
+}
+
+.radical-img {
+    height: 25px;
+}
+
+.left-bottom {
+    display: flex;
+    gap: 10px;
+}
+
+.left-bottom span {
+    color: white;
+}
+
+.left-bottom p {
+    color: wheat;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.radically-right img {
+    width: 720px;
+    border-radius: 10px;
+    border: 1px solid snow;
 }
 
 
