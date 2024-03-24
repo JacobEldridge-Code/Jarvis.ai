@@ -947,6 +947,9 @@ nav ul li a {
         border: 1px solid snow;
         margin-left: 1.4rem;
     }
+    #introduction {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1026px) and (min-width: 660px){
@@ -1121,6 +1124,9 @@ nav ul li a {
         width: 700px;
         border-radius: 10px;
         border: 1px solid snow;
+    }
+    #introduction {
+        display: none;
     }
 
 
