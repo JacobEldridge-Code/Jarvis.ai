@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jarvis.ai</title>
-    <link rel="stylesheet" href="/client/index.css">
+    <link rel="stylesheet" href="/client/style.css">
     <script src="/client/script.js" defer></script>
     <script src="https://kit.fontawesome.com/c1b15e9f35.js" crossorigin="anonymous"></script>
 
@@ -47,15 +47,15 @@
                     </div>
                     <div class="search-menu-bottom">
                         <div class="search-options">
-                            <div class="to-select">
+                            <div class="to-select to-hide">
                                 <i class="fa-solid fa-arrow-left"></i> <span>to select</span>
                             </div>
-                            <div class="to-navigate">
+                            <div class="to-navigate to-hide">
                                 <i class="fa-solid fa-arrow-down"></i>
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>to navigate</span>
                             </div>
-                            <div class="to-close">
+                            <div class="to-close to-hide">
                                 <span class="escape-icon">esc</span>
                                 <span>to close</span>
                             </div>
@@ -110,6 +110,8 @@
                     </div></a>
                 </div>
             </div>
+
+            <!-- Animated Cards-->
 
         <section id="scroll-wrapper">
             <div class="scroller-inner">
@@ -180,6 +182,8 @@
             </div>
         </section>
 
+        <!-- Partners -->
+
         <section id="partners">
             <div class="partners-left">
                 <span>Official Partners</span>
@@ -200,43 +204,6 @@
                 </div>
             </div>
         </section>
-
-
-         <!-- section below the home page -->
-
-         <section id="radically">
-            <div class="radically-left">
-                <p>Radically Better GPUs</p>
-                <h2>Easy-to-Use GPUs</h2>
-                <p>Use Brev.dev to find a GPU and get it configured to fine-tune or train your model.</p>
-
-                <div class="radically-left-bottom">
-                    <div class="left-bottom">
-                        <img class="radical-img" src="/assets/icons8-star-24.png" alt="">
-                        <p><span>Get a GPU (or CPU). </span>A single interface between AWS, GCP, Fluidstack, and other GPU clouds. Use credits when you have them. Choose an instance based on costs & availability.</p>
-                    </div>
-
-                    <div class="left-bottom">
-                        <img class="radical-img" src="/assets/icons8-spartan-helmet-24.png" alt="">
-                        <p><span>Set Up Software. </span>CUDA just works. Dependencies installed properly. No more Python environment issues. Sit back and let us do the work.</p>
-                    </div>
-
-                    <div class="left-bottom">
-                        <img class="radical-img" src="/assets/icons8-playing-24.png" alt="">
-                        <p><span>Networking too. </span>A CLI to automatically update your SSH config ensuring it's done securely. Just run brev open instance-name to hop in.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="radically-right">
-                <img src="/assets/radically.png" alt="">
-            </div>
-            
-        </section>
-
-
-
-
     </main>
 </body>
 </html>
