@@ -545,10 +545,11 @@ header {
 }
 
 .radically-left p:nth-child(3) {
-    color: grey;
+    color: white;
     font-size: 19px;
     line-height: 1.5;
     margin-top: 10px;
+    opacity: .7;
 }
 
 .radically-left-bottom {
@@ -571,10 +572,11 @@ header {
 
 .left-bottom span {
     color: white;
+    opacity: 1;
 }
 
 .left-bottom p {
-    color: wheat;
+    color: gray;
     line-height: 1.7;
     font-size: 17px;
 }
@@ -584,6 +586,52 @@ header {
     border-radius: 10px;
     border: 1px solid snow;
 }
+
+/* introduction section */
+
+#introduction {
+    background: #171B23;
+    height: 150vh;
+}
+
+.intro-left {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px
+}
+
+nav li {
+    padding-top: 15px;
+    font-size: 12px;
+    transition: 0.1s ease-in-out;
+}
+
+nav li:hover {
+    opacity: 1;
+}
+
+nav li h2 {
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+    margin: 15px 0px;
+}
+
+.left-border {
+    border-left: 1px solid white;
+    padding-left: 10px;
+    opacity: .5;
+}
+
+nav ul li a {
+    color: white;
+    opacity: .5;
+}
+
+
+
+
+
 
 
 
@@ -901,7 +949,7 @@ header {
     }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 660px){
+@media only screen and (max-width: 1026px) and (min-width: 660px){
     header {
         padding-top: 10px;
     }
@@ -977,7 +1025,7 @@ header {
     .landing-right {
         display: flex;
         flex-direction: column;
-        width: 85%;
+        width: 95%;
         background-color: #171B23;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 5px;
@@ -989,25 +1037,92 @@ header {
         justify-content: center;
         align-items: center;
         text-align: left;
-        padding: 20px 12px;
+        padding: 20px 25px;
         gap: 10px;
     }
-    
     .label-img {
         width: 60px;
         padding: 15px;
         background-color: #1e293b;
         border-radius: 5px;
-    }
-    
+    }  
     .label-1-text {
         line-height: 1.8;
     }
 
-
-    .cards {
-        display: none;
+    #radically {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        height: 110vh;
+        background-color: #071630;
+        width: 100%;
+        gap: 8rem;
     }
+    
+    .radically-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 70%;
+    }
+    
+    .radically-left p:nth-child(1) {
+        color: #0dbfe7;
+        font-size: 18px;
+    }
+    
+    .radically-left h2 {
+        color: white;
+        font-size: 44px;
+    }
+    
+    .radically-left p:nth-child(3) {
+        color: grey;
+        font-size: 19px;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+    
+    .radically-left-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        width: 35rem;
+        gap: 2rem;
+    }
+    
+    .radical-img {
+        height: 25px;
+    }
+    
+    .left-bottom {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .left-bottom span {
+        color: white;
+    }
+    
+    .left-bottom p {
+        line-height: 1.7;
+        font-size: 17px;
+    }
+
+    .radically-right {
+        margin-left: 110px;
+    }
+    
+    .radically-right img {
+        width: 700px;
+        border-radius: 10px;
+        border: 1px solid snow;
+    }
+
 
 }
 
