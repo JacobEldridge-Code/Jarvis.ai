@@ -927,12 +927,7 @@ nav ul li a {
         gap: 10px;
     }
     
-    .left-bottom span {
-        color: white;
-    }
-    
     .left-bottom p {
-        color: wheat;
         line-height: 1.7;
         font-size: 17px;
     }
@@ -946,6 +941,11 @@ nav ul li a {
         border-radius: 10px;
         border: 1px solid snow;
         margin-left: 1.4rem;
+    }
+
+
+    #introduction {
+        display: none;
     }
 }
 
