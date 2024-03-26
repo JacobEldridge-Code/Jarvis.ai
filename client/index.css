@@ -38,8 +38,7 @@ body {
 
 
 header {
-    position: relative;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -47,6 +46,7 @@ header {
     align-items: center;
     padding: 10px 50px;
     z-index: 10;
+    width: 100%;
 }
 
 .header-icon {
@@ -55,7 +55,7 @@ header {
 }
 
 .header-middle {
-    padding-left: 240px;
+    padding-left: 220px;
 }
 
 .middle-btn {
@@ -94,7 +94,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 35px;
-    padding-right: 65px;
 }
 
 .header-right a {
@@ -289,7 +288,7 @@ header {
     align-items: center;
     gap: 10rem;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 150px;
     padding: 0px 100px;
 }
 
@@ -932,7 +931,6 @@ nav ul li a {
     }
     
     .left-bottom p {
-        color: wheat;
         line-height: 1.7;
         font-size: 17px;
     }
