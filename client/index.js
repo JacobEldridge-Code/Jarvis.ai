@@ -47,3 +47,15 @@ let toggleBlur = () => {
     blur.classList.toggle("active");
 }
 //blur effect ends
+
+//group click event
+
+document.addEventListener("DOMContentLoaded", function() {
+    let groups = document.querySelectorAll('.group');
+
+    groups.forEach(function(group) {
+        group.addEventListener('click', () => {
+            group.classList.toggle('clicked');
+        });
+    });
+});
