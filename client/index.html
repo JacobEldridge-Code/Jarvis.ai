@@ -238,7 +238,7 @@
 
         <section id="introduction">
             <div class="intro-left">
-               <!--<div>This will be the scroll bar</div>--> 
+               <div class="scrollable-nav">
                 <nav>
                     <li><h2>Introduction</h2>
                             <ul>                           
@@ -253,6 +253,7 @@
                         <li class="left-border"><a href="#">Download RAM</a></li>
                         <li class="left-border"><a href="#">Increase Hard Drive Space</a></li>
                         <li class="left-border"><a href="#">Add GPU to Instance</a></li>
+                        <li class="left-border"><a href="#">Remove GPU to Instance</a></li>
                     </ul>
                 </li>
 
@@ -261,6 +262,7 @@
                         <li class="left-border"><a href="#">Close Private Repos</a></li>
                         <li class="left-border"><a href="#">Deployments</a></li>
                         <li class="left-border"><a href="#">Copy Personal Settings</a></li>
+                        <li class="left-border"><a href="#">Environment Variables</a></li>
                         <li class="left-border"><a href="#">Common Installations</a></li>
                     </ul>
                 </li>
@@ -271,6 +273,7 @@
                         <li class="left-border"><a href="">Install the Jarvis CLI</a></li>
                         <li class="left-border"><a href="">Connect your own cloud</a></li>
                         <li class="left-border"><a href="">Connect via VSCode</a></li>
+                        <li class="left-border"><a href="">Connect Via Jetbrains</a></li>
                         <li class="left-border"><a href="">Invite Users</a></li>
                     </ul>
                 </li>
@@ -285,6 +288,76 @@
                 </li>
 
                 </nav>
+            </div> 
+            </div>
+
+
+            <div class="intro-middle">
+                <p>Introduction</p>
+                <h3>Getting Started</h3>
+                <p>Build faster with a better dev environment. Brev connects to cloud providers to find you a GPU at the best price, configures it, and wraps SSH to connect your code editor to the remote machine. <span>Quick start</span></p>
+
+                <div class="grid-container">
+                    <div class="card">
+                        <img src="/assets/icons8-arrow-left-24.png" alt="arrow left image">
+                        <h5>Quick Start</h5>
+                        <p>Make a Jarvis account and your first instance.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/icons8-start-menu-24.png" alt="start menu image">
+                        <h5>Reference</h5>
+                        <p>Reference for higher level concepts, the CLI, instance types, etc.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/icons8-staad-rcdc-24.png" alt="start menu image">
+                        <h5>Infrastructure How To's</h5>
+                        <p>Change your instance, add or remove a GPU, add GB to your hard drive, etc.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/icons8-environment-24.png" alt="start menu image">
+                        <h5>Environment How To's</h5>
+                        <p>Set up your environment to make sure your code always runs. Make it easy to share or clone.</p>
+                    </div>
+                </div><hr>
+
+                <div class="quick">
+                    <h2>Quick Start</h2>
+
+                    <h5>1. Create an account</h5>
+                    <p>Mane an account in the <span>Jarvis Console.</span></p>
+
+                    <h5>2. Create your first instance</h5>
+                    <p>You can create your own instance from scratch or use a template. The console should give you a couple of template options.</p>
+                    <p>For example, <span>click here</span> to create an instance with the Stable Diffusion UI template. Click <span>here</span>for the accompanying guide.</p>
+
+                    <h5>3. Connect to your instance and start coding</h5>
+                    <p>Brev wraps ssh to make it easy to hop into your instance, <span>so with the CLI</span>, run one of the following commands in your terminal.</p>
+                    <p>To SSH your terminal into your dev terminal.</p>
+                    <div>jarvis shell stable-diffusion</div>
+                    <p>or SSH VS Code into your instance with:</p>
+                    <div>jarvis open stable-diffusion # ssh with vscode into your instance</div>
+
+                    <h5>That's it <img src="/assets/icons8-celebration-24.png" alt="celebration emoji" loading="lazy"></h5>
+
+                    <p>Try creating your own instance <span>here</span> and reach out to us in the <span>Discord</span> for help! We're here for anything you need. Build something great.</p>
+                    <div>
+                        <img src="/assets/icons8-light-bulb-24.png" alt="light bulb" loading="lazy" width="30px">
+                        <h5>Running instance might still be installing your dependencies</h5>
+                        <p>If the instace is running, that means it is available. If you have a lot of software dependencies, they might still be installing, so just give it a moment; it may take a few minutes for the Notebook button to appear after the instance has started. We're currently working on a better way to surface this info.</p>
+                    </div>
+                </div><hr>
+
+                <div class="help">
+                    <h5>Getting help</h5>
+                    <p>We want to create as many channels for help as possible; if you'd like a new channel, please let us know!</p>
+                    <h5>Join the community</h5>
+                    <p>Reach out to us in the <span>Discord!</span></p>
+                    <h5>Shareed Slack channel</h5>
+                    <p>Paid users get a prioritized shared Slack channel with our team!</p>
+
+                    <h5>Want to work together?</h5>
+                    <p>Shoot us an email at <span>partners@jarvis.dev</span></p>
+                </div><hr>
             </div>
         </section>
 
