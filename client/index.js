@@ -59,3 +59,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// left section scroll
+
+// document.addEventListener('click', () => {
+//     let introLeft = document.querySelector('.intro-left');
+//     let introMiddle = document.querySelector('.intro-middle');
+//     let scroll = window.scrollY; // read-only property that will have the value changed when the user scrolls up or down
+
+//     if (scroll >= introMiddle.offsetTop) {
+//         introLeft.style.position = 'relative';
+//     } else {
+//         introLeft.style.position = 'sticky';
+//     }
+
+// });

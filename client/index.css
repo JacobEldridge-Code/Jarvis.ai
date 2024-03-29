@@ -586,52 +586,6 @@ header {
     border: 1px solid snow;
 }
 
-/* introduction section */
-
-#introduction {
-    background: #171B23;
-    height: 150vh;
-}
-
-.intro-left {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 0px
-}
-
-nav li {
-    padding-top: 15px;
-    font-size: 12px;
-    transition: 0.1s ease-in-out;
-}
-
-nav li:hover {
-    opacity: 1;
-}
-
-nav li h2 {
-    font-size: 14px;
-    color: white;
-    font-weight: 300;
-    margin: 15px 0px;
-}
-
-.left-border {
-    border-left: 1px solid white;
-    padding-left: 10px;
-    opacity: .5;
-}
-
-nav ul li a {
-    color: white;
-    opacity: .5;
-}
-
-
-
-
-
-
 
 
 
