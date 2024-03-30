@@ -27,7 +27,7 @@
                     <a href="/client/index.html#radically">Docs</a>
                     <a href="/client/blog.html">Blog</a>
                     <a href="/client/pricing.html">Pricing</a>
-                    <button class="get-started">Get Started</button>
+                    <a href="/client/index.html"><button class="get-started">Get Started</button></a>
                 </div>
             </header>
                 <div id="hidden-search-menu">
@@ -278,7 +278,32 @@
                                 </tr>
                             </table>
                         </div>
+
+                        <p class="estimates">*The prices are estimates. Check out <span>the console</span> for live prices.</p>
+
+                        <div id="disk-section">
+                            <h2>Disk</h2>
+                            <p>$0.0001314 per GB per hour for the lifetime of an instance</p>
+                        </div>
+
+                        <div id="no-need-section">
+                            <h2>No need to always be on a GPU!</h2>
+                            <p>Every Jarvis instance can be scaled on the fly. No need to stick to a GPU instance if you don't need it. Behind the scenes, we do this by shifting your machine's disk over to a different instance type, briefly restarting it.</p>
+                        </div>
+
+                        <div id="scaling-section">
+                            <h2>Scaling an instance</h2>
+                            <p>In the Brev console, go to your instance settings and under hardware, you'll see a slider to scale your instance.
+
+                                (At the moment, this only works for non-SPOT instances. We are working on a fix for SPOT instances so stay tuned 🤙)</p>
+                        </div>
                         
+                        <hr>
+
+                        <div class="next-section">
+                            <h3>Next</h3>
+                            <a href="/client/index.html"><span>Getting started →</span></a>
+                        </div>
                     </div>
         
                     <div class="pricing-right">

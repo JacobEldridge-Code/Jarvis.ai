@@ -1031,23 +1031,29 @@ nav ul li a {
 /* pricing section */
 
 #pricing {
-    border: 2px solid green;
+    margin-top: 10rem;
+    background: #171B23;
+    height: 275vh;
+    width: 100%;
+    padding: 0px 15px;
     display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-    width: 100rem;
-    min-height: 100vh;
-    gap: 3rem;
-    margin-top: 13rem;
-    padding: 4px;
+    justify-content: center;
     position: relative;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.pricing-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .pricing-header h2 {
     color: white;
     font-size: 3.2rem;
-    padding-left: 15rem;
     padding-bottom: 2rem;
 }
 
@@ -1066,7 +1072,8 @@ nav ul li a {
     gap: 3rem;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 40%;
+    height: fit-content;
     padding: 30px 30px 0px 50px;
 }
 
@@ -1082,7 +1089,7 @@ table {
 }
 
 th, td {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #91b4d245;
     text-align: center;
     padding: 8px;
 }
@@ -1128,15 +1135,16 @@ tr th:last-child {
 
 .pricing-right p {
     color: white;
+    font-size: 15px;
 }
 
 .pricing-right-links {
-    margin-top: 30px;
+    margin-top: 22px;
     display: flex;
     flex-direction: column;
     text-align: left;
     gap: 15px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
@@ -1148,10 +1156,6 @@ tr th:last-child {
     color: rgb(196, 196, 196);
 }
 
-.pricing-right-links a.active span {
-    color: blue;
-}
-
 .intro-right-indent p:nth-child(4) {
     color: gray;
 }
@@ -1160,7 +1164,76 @@ tr th:last-child {
     color: gray;
 }
 
+.estimates {
+    color: white;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
 
+.estimates span {
+    color: rgb(6 182 212);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#disk-section {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#disk-section p{
+    color: rgb(146, 163, 186);
+    font-size: 17px;
+    word-spacing: 1.25px;
+    font-weight: light;
+}
+
+#no-need-section {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#no-need-section p{
+    color: rgb(146, 163, 186);
+    font-size: 17px;
+    word-spacing: 1.25px;
+    font-weight: light;
+}
+
+#scaling-section {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#scaling-section p{
+    color: rgb(146, 163, 186);
+    font-size: 18px;
+    word-spacing: 1.25px;
+    font-weight: light;
+}
+
+.next-section {
+    color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: right;
+    font-size: 14px;
+}
+
+.next-section a{
+    color: rgb(146, 163, 186);
+    font-size: 17.5px;
+    word-spacing: 1.25px;
+    font-weight: 600;
+}
+
+.next-section a:hover {
+    color: white;
+}
 
 
 /* mobile device media query */
