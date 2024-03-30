@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis.ai</title>
+    <link rel="stylesheet" href="/client/index.css">
+    <script src="/client/index.js" defer></script>
+    <script src="https://kit.fontawesome.com/c1b15e9f35.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/jarvis.png">
+</head>
+<body id="blog-body">
+        <div id="background">
+            <div id="blur-overlay"></div>
+            <header>
+                <img class="header-icon" src="/assets/jarvis.png" alt="jarvis icon image" loading="lazy" title="jarvis icon image">
+                <div class="header-middle">
+                    <button onclick="toggleBlur()" class="middle-btn" type="button">
+                        <div class="button-left">
+                            <img src="/assets/search.png" alt="search icon" loading="lazy" title="search icon">
+                            <span class="middle-span">Search docs</span>
+                        </div>
+                            <p>Ctrl K</p>
+                    </button>
+                </div>
+                <div class="header-right">
+                    <a href="/client/index.html#radically">Docs</a>
+                    <a href="/client/blog.html">Blog</a>
+                    <a href="#">Pricing</a>
+                    <button class="get-started">Get Started</button>
+                </div>
+            </header>
+                <div id="hidden-search-menu">
+                    <div class="hidden-search-menu-top">
+                        <div class="searchbar-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-input" placeholder="Search docs">
+                        </div>
+                            <span id="cancel-btn">Cancel</span>
+                    </div>
+                    <div class="search-menu-middle">
+                        <span>No recent searches</span>
+                    </div>
+                    <div class="search-menu-bottom">
+                        <div class="search-options">
+                            <div class="to-select to-hide">
+                                <i class="fa-solid fa-arrow-left"></i> <span>to select</span>
+                            </div>
+                            <div class="to-navigate to-hide">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span>to navigate</span>
+                            </div>
+                            <div class="to-close to-hide">
+                                <span class="escape-icon">esc</span>
+                                <span>to close</span>
+                            </div>
+                            <div class="search-link-wrapper">
+                                <span>Search by</span>
+                                <a target="_blank" href="https://www.algolia.com/"><img class="search-icon" src="/assets/algolia-logo.svg" alt="Algolia Logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <section id="blog">
+                <div class="blog-header">
+                    <h2>Jarvis.ai Blog</h2>
+                    <p>Strategy and tips on the latest in making computers sentient</p>
+                </div>
+
+                <div id="blog-card-container">
+                    <div class="blog-left">
+                        <div class="blog-cards">
+                            <div class="blog-card-top1">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>How Much Does It Cost to Train a Large Language Model? A Guide</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/kagome-pic.jpg" alt="Picture of Kagome" loading="lazy" title="How Much Does It Cost to Train a Large Language Model? A Guide">
+                                    <div class="blog-user-info">
+                                        <h4>Karlie</h4>
+                                        <span>March 12, 2024 · 10 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-cards">
+                            <div class="blog-card-top2">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>How to Fine-Tune Mistral on Your Own Data</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/lune-pic.jpg" alt="Picture of shawn" title="How to Fine-Tune Mistral on Your Own Data" loading="lazy">
+                                    <div class="blog-user-info">
+                                        <h4>Shawn</h4>
+                                        <span>March 4, 2024 · 13 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-cards">
+                            <div class="blog-card-top3">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>Run ControlNet on Stable Diffusion AUTOMATIC1111 WebUI</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/yonkodonny-pic.jpg" titl="Run ControlNet on Stable Diffusion AUTOMATIC1111 WebUI" loading="lazy" alt="Picture of Toji from JJK">
+                                    <div class="blog-user-info">
+                                        <h4>Favii</h4>
+                                        <span>February 20, 2024 · 6 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-cards">
+                            <div class="blog-card-top4">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>A simple guide to fine-tuning Llama 2 on your own data</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/catglasses-pic.jpg" title="A simple guide to fine-tuning Llama 2 on your own data" alt="Picture of a cat with glasses" loading="lazy">
+                                    <div class="blog-user-info">
+                                        <h4>Ben</h4>
+                                        <span>February 3, 2024 · 14 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="blog-right">
+                        <div class="blog-cards">
+                            <div class="blog-card-top5">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>How QLoRA, a Revolutionary Fine-Tuning Method, Works</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/embur-pic.jpg" title="How QLoRA, a Revolutionary Fine-Tuning Method, Works" alt="Picture of jinwoo from solo leveling" loading="lazy">
+                                    <div class="blog-user-info">
+                                        <h4>Embur</h4>
+                                        <span>March 5, 2024 · 18 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-cards">
+                            <div class="blog-card-top6">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>A Guide to Cost-Effectively Fine-Tuning Mistral</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/luka-pic.jpg" title="" alt="picture of luka doncic">
+                                    <div class="blog-user-info">
+                                        <h4>Luka</h4>
+                                        <span>February 26, 2024 · 15 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-cards">
+                            <div class="blog-card-top7">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>The complete guide to Google Colab Compute Prices and Performance</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/turtle-pic.png" title="The complete guide to Google Colab Compute Prices and Performance" alt="a turtle" loading="lazy">
+                                    <div class="blog-user-info">
+                                        <h4>Sam</h4>
+                                        <span>February 10, 2024 · 7 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blog-cards">
+                            <div class="blog-card-top8">
+                            </div>
+                            <div class="blog-card-bottom">
+                                <div class="blog-card-text">
+                                    <h5>AI</h5>
+                                    <p>How to manage your goodle Colab state and storage</p>
+                                </div>
+                                <div class="blog-card-users">
+                                    <img class="blog-img-users" src="/assets/ninja.jpg" loading="lazy" title="How to manage your goodle Colab state and storage" alt="a ninja">
+                                    <div class="blog-user-info">
+                                        <h4>Max</h4>
+                                        <span>January 29, 2024 · 9 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </body>
+</html>
