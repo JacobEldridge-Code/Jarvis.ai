@@ -590,7 +590,7 @@ header {
 
 #introduction {
     background: #171B23;
-    height: 300vh;
+    height: 280vh;
     width: 100%;
     padding: 0px 15px;
     display: flex;
@@ -822,6 +822,64 @@ nav ul li a {
 
 .help > p:nth-child(8) {
     padding-bottom: 0;
+}
+
+.intro-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 15%;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.intro-right p:nth-child(1) {
+    color: white;
+    padding-bottom: 20px;
+    opacity: .9;
+}
+
+.intro-right p:nth-child(2) {
+    color: #1ca9c9;
+    opacity: .9;
+}
+
+.intro-right-indent {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.intro-right-indent p:nth-child(1) {
+    color: gray;
+    padding-bottom: 0;
+}
+
+.intro-right-indent p:nth-child(2) {
+    color: gray;
+}
+
+.intro-right-indent p:nth-child(3) {
+    color: gray;
+    line-height: 1.4;
+}
+
+.intro-right-indent p:nth-child(4) {
+    color: gray;
+}
+
+.p-img {
+    display: flex;
+    gap: 10px;
+}
+
+.intro-right p:nth-child(4) {
+    margin-top: 15px;
+    color: #1ca9c9;
+    opacity: .9;
 }
 
 
