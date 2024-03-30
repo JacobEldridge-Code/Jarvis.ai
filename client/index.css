@@ -1032,20 +1032,29 @@ nav ul li a {
 /* pricing section */
 
 #pricing {
+    margin-top: 10rem;
     background: #171B23;
-    height: 250vh;
+    height: 275vh;
     width: 100%;
     padding: 0px 15px;
     display: flex;
     justify-content: center;
     position: relative;
     flex-direction: column;
+    gap: 6rem;
+}
+
+.pricing-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .pricing-header h2 {
     color: white;
     font-size: 3.2rem;
-    padding-left: 15rem;
     padding-bottom: 2rem;
 }
 
@@ -1067,7 +1076,6 @@ nav ul li a {
     width: 40%;
     height: fit-content;
     padding: 30px 30px 0px 50px;
-    border-bottom: 1px solid gray;
 }
 
 .pricing-table h2 {
@@ -1149,10 +1157,6 @@ tr th:last-child {
     color: rgb(196, 196, 196);
 }
 
-.pricing-right-links a.active span {
-    color: blue;
-}
-
 .intro-right-indent p:nth-child(4) {
     color: gray;
 }
@@ -1212,7 +1216,25 @@ tr th:last-child {
     font-weight: light;
 }
 
+.next-section {
+    color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: right;
+    font-size: 14px;
+}
 
+.next-section a{
+    color: rgb(146, 163, 186);
+    font-size: 17.5px;
+    word-spacing: 1.25px;
+    font-weight: 600;
+}
+
+.next-section a:hover {
+    color: white;
+}
 
 
 /* mobile device media query */
