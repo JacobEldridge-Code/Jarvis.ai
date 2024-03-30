@@ -502,6 +502,7 @@ header {
     padding: 0px 15px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .intro-left {
@@ -738,6 +739,10 @@ nav ul li a {
     width: 15%;
     margin-top: 50px;
     margin-left: 80px;
+    position: sticky;
+    height: fit-content;
+    top: 5rem;
+    bottom: 0;
 }
 
 .intro-right p:nth-child(1) {
@@ -778,6 +783,10 @@ nav ul li a {
     color: gray;
 }
 
+.intro-right-indent p:nth-child(5) {
+    color: gray;
+}
+
 .p-img {
     display: flex;
     gap: 10px;
@@ -788,6 +797,8 @@ nav ul li a {
     color: #1ca9c9;
     opacity: .9;
 }
+
+/* blog section */
 
 #blog {
     display: flex;
@@ -1016,6 +1027,139 @@ nav ul li a {
     padding-bottom: 8px;
     color: rgb(183, 198, 225);
 }
+
+/* pricing section */
+
+#pricing {
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100rem;
+    min-height: 100vh;
+    gap: 3rem;
+    margin-top: 13rem;
+    padding: 4px;
+    position: relative;
+}
+
+.pricing-header h2 {
+    color: white;
+    font-size: 3.2rem;
+    padding-left: 15rem;
+    padding-bottom: 2rem;
+}
+
+.pricing-header p {
+    color: rgb(154, 166, 182);
+    font-size: 22px;
+}
+
+.pricing-header span {
+    color: rgb(6 182 212);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pricing-table {
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 30px 30px 0px 50px;
+}
+
+.pricing-table h2 {
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    color: white;
+    font-size: 15px;
+}
+
+td {
+    padding: 15px;
+    font-size: 13.5px;
+    color: rgb(166, 186, 212);
+}
+
+tr td:first-child {
+    text-align: left;
+}
+
+tr th:first-child {
+    text-align: left;
+}
+
+tr td:last-child {
+    text-align: left;
+}
+
+tr th:last-child {
+    text-align: left;
+}
+
+.pricing-right {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-top: 50px;
+    margin-left: 80px;
+    position: sticky;
+    height: fit-content;
+    top: 5rem;
+    bottom: 0;
+}
+
+.pricing-right p {
+    color: white;
+}
+
+.pricing-right-links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    font-size: 16px;
+}
+
+
+.pricing-right-links span {
+    color: rgb(139, 153, 166);
+}
+
+.pricing-right-links a span:hover {
+    color: rgb(196, 196, 196);
+}
+
+.pricing-right-links a.active span {
+    color: blue;
+}
+
+.intro-right-indent p:nth-child(4) {
+    color: gray;
+}
+
+.intro-right-indent p:nth-child(5) {
+    color: gray;
+}
+
 
 
 

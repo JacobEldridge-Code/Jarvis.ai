@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis.ai - Pricing</title>
+    <link rel="stylesheet" href="/client/index.css">
+    <script src="/client/index.js" defer></script>
+    <script src="https://kit.fontawesome.com/c1b15e9f35.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/jarvis.png">
+</head>
+<body id="blog-body">
+        <div id="background">
+            <div id="blur-overlay"></div>
+            <header>
+                <img class="header-icon" src="/assets/jarvis.png" alt="jarvis icon image" loading="lazy" title="jarvis icon image">
+                <div class="header-middle">
+                    <button onclick="toggleBlur()" class="middle-btn" type="button">
+                        <div class="button-left">
+                            <img src="/assets/search.png" alt="search icon" loading="lazy" title="search icon">
+                            <span class="middle-span">Search docs</span>
+                        </div>
+                            <p>Ctrl K</p>
+                    </button>
+                </div>
+                <div class="header-right">
+                    <a href="/client/index.html#radically">Docs</a>
+                    <a href="/client/blog.html">Blog</a>
+                    <a href="/client/pricing.html">Pricing</a>
+                    <button class="get-started">Get Started</button>
+                </div>
+            </header>
+                <div id="hidden-search-menu">
+                    <div class="hidden-search-menu-top">
+                        <div class="searchbar-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="search-input" placeholder="Search docs">
+                        </div>
+                            <span id="cancel-btn">Cancel</span>
+                    </div>
+                    <div class="search-menu-middle">
+                        <span>No recent searches</span>
+                    </div>
+                    <div class="search-menu-bottom">
+                        <div class="search-options">
+                            <div class="to-select to-hide">
+                                <i class="fa-solid fa-arrow-left"></i> <span>to select</span>
+                            </div>
+                            <div class="to-navigate to-hide">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span>to navigate</span>
+                            </div>
+                            <div class="to-close to-hide">
+                                <span class="escape-icon">esc</span>
+                                <span>to close</span>
+                            </div>
+                            <div class="search-link-wrapper">
+                                <span>Search by</span>
+                                <a target="_blank" href="https://www.algolia.com/"><img class="search-icon" src="/assets/algolia-logo.svg" alt="Algolia Logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <section id="pricing">
+                <div class="pricing-header">
+                    <h2>Really Simple Pricing.</h2>
+                    <p>Only pay for what you use. Jarvis connects to the major clouds to help you easily find a GPU. <br>
+                        See Below for Price estimates, or <span>the console</span> for live prices.</p>
+                </div>
+
+                <section id="introduction">
+                    <div class="intro-left">
+                       <div class="scrollable-nav">
+                        <nav>
+                            <li><h2>Introduction</h2>
+                                    <ul>                           
+                                        <li class="left-border"><a href="#">Getting Started</a></li>
+                                    </ul>
+                            </li>
+        
+                            <li><h2>Hardware How To's</h2>
+                            <ul>                    
+                                <li class="left-border"><a href="#">Expose Port on Public URL</a></li>
+                                <li class="left-border"><a href="#">Troubleshoot Reboot</a></li>
+                                <li class="left-border"><a href="#">Download RAM</a></li>
+                                <li class="left-border"><a href="#">Increase Hard Drive Space</a></li>
+                                <li class="left-border"><a href="#">Add GPU to Instance</a></li>
+                                <li class="left-border"><a href="#">Remove GPU to Instance</a></li>
+                            </ul>
+                        </li>
+        
+                            <li><h2>Environment How To's</h2>
+                            <ul>           
+                                <li class="left-border"><a href="#">Close Private Repos</a></li>
+                                <li class="left-border"><a href="#">Deployments</a></li>
+                                <li class="left-border"><a href="#">Copy Personal Settings</a></li>
+                                <li class="left-border"><a href="#">Environment Variables</a></li>
+                                <li class="left-border"><a href="#">Common Installations</a></li>
+                            </ul>
+                        </li>
+        
+                        <li><h2>Misc. How to's</h2>
+                            <ul>  
+                                <li class="left-border"><a href="">Home</a></li>
+                                <li class="left-border"><a href="">Install the Jarvis CLI</a></li>
+                                <li class="left-border"><a href="">Connect your own cloud</a></li>
+                                <li class="left-border"><a href="">Connect via VSCode</a></li>
+                                <li class="left-border"><a href="">Connect Via Jetbrains</a></li>
+                                <li class="left-border"><a href="">Invite Users</a></li>
+                            </ul>
+                        </li>
+        
+                        <li><h2>Reference</h2>
+                            <ul>  
+                                <li class="left-border"><a href="">Home</a></li>
+                                <li class="left-border"><a href="">GPU</a></li>
+                                <li class="left-border"><a href="">Setup Scripts</a></li>
+                                <li class="left-border"><a href="">Debugging</a></li>
+                            </ul>
+                        </li>
+        
+                        </nav>
+                    </div> 
+                    </div>
+        
+        
+                    <div class="pricing-table">
+                        <div id="gpu-section">
+                            <h2>GPU</h2>
+                            <table>
+                                <tr>
+                                    <th>GPU</th>
+                                    <th>Hourly</th>
+                                    <th>Spot</th>
+                                    <th>Provider</th>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia L4</td>
+                                    <td>$0.17</td>
+                                    <td>$0.05</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia T4</td>
+                                    <td>$0.40</td>
+                                    <td>$0.08</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia T4</td>
+                                    <td>$0.53</td>
+                                    <td>$0.20</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia K80</td>
+                                    <td>$0.50</td>
+                                    <td>$0.05</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia K80</td>
+                                    <td>$0.90</td>
+                                    <td>$0.27</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia A10</td>
+                                    <td>$0.60</td>
+                                    <td></td>
+                                    <td>Lambda-Labs</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia P4</td>
+                                    <td>$0.65</td>
+                                    <td>$0.08</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia M60</td>
+                                    <td>$0.75</td>
+                                    <td>$0.25</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia A10G</td>
+                                    <td>$1.01</td>
+                                    <td>$0.30</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia P100</td>
+                                    <td>$1.51</td>
+                                    <td>$0.44</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia V100</td>
+                                    <td>$2.53</td>
+                                    <td>$0.75</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia V100</td>
+                                    <td>$3.06</td>
+                                    <td>$0.92</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia A100 40GB</td>
+                                    <td>$1.10</td>
+                                    <td></td>
+                                    <td>Lambda-Labs</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia A100 40GB</td>
+                                    <td>$3.67</td>
+                                    <td>$1.21</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <tr>
+                                    <td>Nvidia A100 80GB</td>
+                                    <td>$6.21</td>
+                                    <td>$2.32</td>
+                                    <td>GCP</td>
+                                </tr>
+                                <td>Nvidia H100</td>
+                                    <td>$1.10</td>
+                                    <td></td>
+                                    <td>Lambda-Labs</td>
+                            </table>
+                        </div>
+                        
+                        <div id="cpu-section">
+                            <h2>CPU</h2>
+                            <table>
+                                <tr>
+                                    <th>Instance</th>
+                                    <th>vCPU</th>
+                                    <th>RAM</th>
+                                    <th>Hourly</th>
+                                    <th>Spot*</th>
+                                    <th>Provider</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>2x4</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>$0.04</td>
+                                    <td>$0.002</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>2x8</td>
+                                    <td>2</td>
+                                    <td>8</td>
+                                    <td>$0.08</td>
+                                    <td>$0.07</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>4x16</td>
+                                    <td>8</td>
+                                    <td>16</td>
+                                    <td>$0.15</td>
+                                    <td>$0.14</td>
+                                    <td>AWS</td>
+                                </tr>
+                                <tr>
+                                    <td>8x32</td>
+                                    <td>$0.53</td>
+                                    <td>32</td>
+                                    <td>$0.30</td>
+                                    <td>$0.29</td>
+                                    <td>AWS</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="pricing-right">
+                        <p>On this page</p>
+                        <div class="pricing-right-links">
+                            <a href="#gpu-section"><span>GPU</span></a>
+                            <a href="#cpu-section"><span>CPU</span></a>
+                            <a href="#disk-section"><span>Disk</span></a>
+                            <a href="#no-need-section"><span>No need to always be on a GPU!</span>
+                            <a href="#scaling-section"><span>Scaling an instance</span></a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </body>
+</html>
