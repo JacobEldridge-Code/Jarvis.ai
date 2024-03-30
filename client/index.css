@@ -497,8 +497,7 @@ header {
 
 #introduction {
     background: #171B23;
-    height: 150vh;
-    height: 300vh;
+    height: 280vh;
     width: 100%;
     padding: 0px 15px;
     display: flex;
@@ -511,7 +510,6 @@ header {
     left: 0;
     display: flex;
     flex-direction: column;
-    padding: 15px 0px;
     justify-content: flex-start;
     height: 100vh;
     overflow-y: auto;
@@ -525,17 +523,30 @@ header {
 
 nav li {
     padding-top: 15px;
-    font-size: 12px;
     font-size: 14px;
     transition: 0.1s ease-in-out;
 }
 
+nav li:hover {
+    opacity: 1;
+}
+
 nav li h2 {
-    font-size: 14px;
     font-size: 16px;
     color: white;
     font-weight: 300;
     margin: 15px 0px;
+}
+
+.left-border {
+    border-left: 1px solid white;
+    padding-left: 10px;
+    opacity: .5;
+}
+
+nav ul li a {
+    color: white;
+    opacity: .5;
 }
 
 
@@ -718,6 +729,64 @@ nav li h2 {
 
 .help > p:nth-child(8) {
     padding-bottom: 0;
+}
+
+.intro-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 15%;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.intro-right p:nth-child(1) {
+    color: white;
+    padding-bottom: 20px;
+    opacity: .9;
+}
+
+.intro-right p:nth-child(2) {
+    color: #1ca9c9;
+    opacity: .9;
+}
+
+.intro-right-indent {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.intro-right-indent p:nth-child(1) {
+    color: gray;
+    padding-bottom: 0;
+}
+
+.intro-right-indent p:nth-child(2) {
+    color: gray;
+}
+
+.intro-right-indent p:nth-child(3) {
+    color: gray;
+    line-height: 1.4;
+}
+
+.intro-right-indent p:nth-child(4) {
+    color: gray;
+}
+
+.p-img {
+    display: flex;
+    gap: 10px;
+}
+
+.intro-right p:nth-child(4) {
+    margin-top: 15px;
+    color: #1ca9c9;
+    opacity: .9;
 }
 
 #blog {
