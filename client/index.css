@@ -503,7 +503,6 @@ header {
     display: flex;
     justify-content: center;
     position: relative;
-    border: 1px solid red;
 }
 
 .intro-left {
