@@ -768,6 +768,17 @@ nav ul li a {
     font-size: 16px;
 }
 
+.intro-right-indent p {
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.intro-right-indent p:hover {
+    color: white !important; 
+}
+
+
+
 .intro-right-indent p:nth-child(1) {
     color: gray;
     padding-bottom: 0;
