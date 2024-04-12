@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header id="tune-header">
+        <div class="tune-header-left">
+            <a href="index.html"><img class="tune-header-icon" src="/assets/jarvis.png" alt="jarvis icon image" loading="lazy" title="jarvis icon image"></a>
+            <div class="tune-header-left-a">
+                <a href="#">Instances</a>
+                <a href="#">Notebooks</a>
+                <a href="#">People</a>
+                <a href="#">Billing</a>
+                <a href="#">Docs</a>
+                </div>
+        </div>
+
+        <div class="tune-header-right">
+            <button>Deploy Now</button>
+            <img src="/assets/embur-pic.jpg" alt="sung Jinwoo">
+        </div>
+    </header>
+
+    <div id="tune-main">
+        <img class="tune-img" src="/assets/yourname.jpg" alt="your name banner" loading="lazy">
+        <div class="links">
+            <a href="">Console</a>
+            <p>•</p>
+            <a href="">Docs</a>
+            <p>•</p>
+            <a href="">Templates</a>
+            <p>•</p>
+            <a href="">Discord</a>
+        </div>
+
+        <div class="tune-content">
+            <h2>Fine-tuning Mistral on your own data</h2>
+            <p>Welcome!</p>
+            <p>In this notebook and tutorial, we will fine-tune the <span>Mistral 7B</span> model - which outperforms Llama 2 13B on all tested benchmarks - on your own data!</p>
+            <h2>Watch the accompanying video walk-through <span>here</span>!</h2>
+            <p>I did this for just one dollar ($1) on an 1x A10G 24GB from Brev.dev (instructions below).</p>
+            <p>This tutorial will use QLoRA, a fine-tuning method that combines quantization and LoRA. For more information about what those are and how they work, see <span>this post</span>.</p>
+            <p>In this notebook, we will load the large model in 4bit using bitsandbytes and use LoRA to train using the PEFT library from Hugging Face.</p>
+            <p>Note that if you ever have trouble importing something from Huggingface, you may need to run huggingface-cli login in a shell. To open a shell in Jupyter Lab, click on 'Launcher' (or the '+' if it's not there) next to the notebook tab at the top of the screen. Under "Other", click "Terminal" and then run the command.</p>
+            <h2>Help us make this tutorial better! Please provide feedback on the <span>Discord channel</span> or on X.</h2>
+            <p>Before we begin: A note on OOM errors</p>
+            <p>If you get an error like this: OutOfMemoryError: CUDA out of memory, tweak your parameters to make the model less computationally intensive. I will help guide you through that in this guide, and if you have any additional questions you can reach out on the <span>Discord channel</span> or on X.</p>
+            <p>To re-try after you tweak your parameters, open a Terminal ('Launcher' or '+' in the nav bar above -> Other -> Terminal) and run the command nvidia-smi. Then find the process ID PID under Processes and run the command kill [PID]. You will need to re-start your notebook from the beginning. (There may be a better way to do this... if so please do let me know!)</p>
+            <h2>Let's Begin</h2>
+            <h5>0. Preparing data</h5>
+            <p>Before you check out a GPU, prepare your dataset for loading and training.</p>
+            <p>To prepare your dataset for loading, all you need are two <span>.jsonl</span> files.</p>
+            <p>If you choose to model your data as input/output pairs, you'll want to use something like the second formatting_func below, which will will combine all your features into one input string.</p>
+            <p>As you can see below, I have <span>notes.jsonl</span> for my <span>train_dataset</span> and <span>notes_validation.jsonl</span> for my eval_dataset.</p>
+            <p>I used Exporter, a free local-only app, to export my Apple Notes to .txt files, and then I wrote a script to process each note into one .jsonl file. Note that for this script, ChatGPT can help out a LOT if you tell it how your data is currently formatted, how you'd like it to be formatted, and ask it to write a script in a certain language you know well (for any debugging) to do so. I also broke up my journal entries so the training sample vector length was smaller (see the discussion on max_length and the data visualization below). I broke it into pieces so that contexts were encapsulated entirely, since I did want the model to understand context about my life.</p>
+            <h5>1. Instantiate GPU & Load Dataset</h5>
+            <p>I used a GPU and dev environment from <span>Jarvis.dev.</span> The whole thing cost me $1 using a 1xA10G 24GB. Click the badge below to get your preconfigured instance:</p>
+            <p>A single A10G (as linked) with 24GB GPU Memory was enough for me. You may need more GPUs and/or Memory if your sequence max_length is larger than 512.
+
+            </p>
+            <p>Once you've checked out your machine and landed in your instance page, select the specs you'd like (I used Python 3.10 and CUDA 12.0.1; these should be preconfigured for you if you use the badge above) and click the "Build" button to build your verb container. Give this a few minutes.
+
+            </p>
+            <p>A few minutes after your model has started Running, click the 'Notebook' button on the top right of your screen once it illuminates (you may need to refresh the screen). You will be taken to a Jupyter Lab environment, where you can upload this Notebook.
+
+            </p>
+            <p>Note: You can connect your cloud credits (AWS or GCP) by clicking "Org: " on the top right, and in the panel that slides over, click "Connect AWS" or "Connect GCP" under "Connect your cloud" and follow the instructions linked to attach your credentials.
+
+            </p>
+            <h5>2. Load Base Model</h5>
+            <p>Let's now load Mistral - mistralai/Mistral-7B-v0.1 - using 4-bit quantization!
+
+            </p>
+            <h5>3. Tokenization</h5>
+            <p>Set up the tokenizer. Add padding on the left as it <span>makes training use less memory.</span></p>
+            <img class="tune-content-graph" src="/assets/distribution.png" alt="distribution graph" loading="lazy">
+            <p>From here, you can choose where you'd like to set the max_length to be. You can truncate and pad training examples to fit them to your chosen size. Be aware that choosing a larger max_length has its compute tradeoffs.
+
+            </p><p>I'm using my personal notes to train the model, and they vary greatly in length. I spent some time cleaning the dataset so the samples were about the same length, cutting up individual notes if needed, but being sure to not cut in the middle of a word or sentence.
+
+            </p><p>Check that input_ids is padded on the left with the eos_token (2) and there is an eos_token 2 added to the end, and the prompt starts with a bos_token (1).
+
+            </p><img class="tune-content-graph" src="/assets/distribution2.png" alt="distribution graph" loading="lazy">
+            <h5>How does the base model do?</h5>
+            <p>Optionally, you can check how Mistral does on one of your data samples. For example, if you have a dataset of users' biometric data to their health scores, you could test the following <span>eval_prompt:</span></p>
+            <h5>4. Set Up LoRA</h5>
+            <p>Now, to start our fine-tuning, we have to apply some preprocessing to the model to <span>prepare it for training.</span> For that use the prepare_model_for_kbit_training method from PEFT.</p>
+
+            <h5>5. Run Training!</h5>
+            <p>I didn't have a lot of training samples: only about 200 total train/validation. I used 500 training steps, and I was fine with overfitting in this case. I found that the end product worked well. It took about 20 minutes on the 1x A10G 24GB.
+
+            </p>
+            <p>Overfitting is when the validation loss goes up (bad) while the training loss goes down significantly, meaning the model is learning the training set really well, but is unable to generalize to new datapoints. In most cases, this is not desired, but since I am just playing around with a model to generate outputs like my journal entries, I was fine with a moderate amount of overfitting.
+
+            </p>
+            <p>With that said, a note on training: you can set the <span>max_steps</span> to be high initially, and examine at what step your model's performance starts to degrade. There is where you'll find a sweet spot for how many steps to perform. For example, say you start with 1000 steps, and find that at around 500 steps the model starts overfitting, as described above. Therefore, 500 steps would be your sweet spot, so you would use the <span>checkpoint-500</span> model repo in your output dir (mistral-journal-finetune) as your final model in step 6 below.</p>
+            <p>If you're just doing something for fun like I did and are OK with overfitting, you can try different checkpoint versions with different degrees of overfitting.
+            </p>
+            <h5>6. Drum Roll... Try the Trained Model!</h5>
+            <p>It's a good idea to kill the current process so that you don't run out of memory loading the base model again on top of the model we just trained. Go to <span>Kernel > Restart Kernel</span> or kill the process via the Terminal <span>(nvidia smi > kill [PID])</span>.
+
+            </p>
+            <p>By default, the PEFT library will only save the QLoRA adapters, so we need to first load the base model from the Huggingface Hub</p>
+            <h5>Sweet... it worked! The fine-tuned model now prints out journal entries in my style!</h5>
+            <p>How funny to see it write like me as an angsty teenager, and honestly adult. I am obsessed. It knows who my friends are and talks about them, and covers the same topics I usually cover. It's really cool.</p>
+            <p class="tune-bottom">I hope you enjoyed this tutorial on fine-tuning Mistral on your own data. If you have any questions, feel free to reach out to me on <span>X or Discord</span>.</p>
+
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -6,6 +6,7 @@
     --roboto: roboto;
     --poppins: poppins;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@
     list-style: none;
     font-family: var(--roboto);
 }
+
 body {
     position: relative;
     display: flex;
@@ -22,12 +24,15 @@ body {
     background: #171B23;
     overflow-x: hidden;
 }
-/* Need to find better background color */ 
+
+
 #background {
     background: #171B23;
     height: 100vh;
     z-index: 50;
 }
+
+
 /* Header section */
 header {
     position: fixed;
@@ -1315,6 +1320,176 @@ tr th:last-child {
     color: gray;
     font-size: 16px;
 }
+
+
+
+/* tune html document */
+
+#tune-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 600px;
+    justify-content: center;
+    background-color: #1e293b;
+    height: 9vh;
+    width: 100%;
+}
+
+.tune-header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 10px;
+}
+
+.tune-header-left-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 10px;
+}
+
+.tune-header-icon {
+    width: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.tune-header-left-a a {
+    color: gray;
+    transition: 0.25s ease-in-out;
+}
+
+.tune-header-left-a a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.tune-header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0px 10px;
+}
+
+.tune-header-right img {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.tune-header-right img:hover {
+    transform: scale(1.25);
+}
+
+.tune-header-right button {
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #1e293b;
+    transition: 0.15s ease-in-out;
+}
+
+.tune-header-right button:hover {
+    background-color: darkgray;
+    color: black;
+}
+
+
+
+#tune-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 58%;
+    margin-top: 10vh;
+}
+
+.tune-img {
+    width: 1100px;
+    height: 250px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.links a {
+    color: gray;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.links p {
+    color: white;
+}
+
+.links a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.tune-content {
+    color: rgba(255, 255, 255, 0.63);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tune-content h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.tune-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.tune-content span {
+    color: #0dbfe7;
+    cursor: pointer;
+}
+
+.tune-content span:hover {
+    border-bottom: 1px solid #0dbfe7;
+}
+
+.tune-content h5 {
+    color: rgba(255, 255, 255, 0.887);
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.tune-content-graph {
+    width: 850px;
+}
+
+.tune-bottom {
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
 
 
 /* mobile device media query */
