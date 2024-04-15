@@ -1657,7 +1657,7 @@ tr th:last-child {
         align-items: start;
         padding-left: 2rem;
         text-align: left;
-        height: 15rem;
+        height: 22rem;
         width: 100%;
     }
     #partners span {
@@ -1765,7 +1765,7 @@ tr th:last-child {
         justify-content: start;
         align-items: center;
         flex-direction: column;
-        height: 140vh;
+        height: auto;
         background-color: #071630;
         width: 100vw;
         gap: 5rem;
@@ -1830,14 +1830,49 @@ tr th:last-child {
     }
     
     .radically-right img {
-        width: 770px;
+        width: 700px;
         border-radius: 10px;
         border: 1px solid snow;
-        margin-left: 1.4rem;
+        margin-left: 1rem;
+        margin-bottom: 50px;
     }
+
     #introduction {
-        display: none;
+        background: #171B23;
+        height: auto;
+        width: 100%;
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
     }
+
+    .intro-middle {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px 30px;
+    }
+
+    .grid-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    
+    .intro-left {
+        display: none;
+        padding: 0;
+    }
+
+    .intro-right {
+        display: none;
+        padding: 0;
+    }
+
 
 
 
