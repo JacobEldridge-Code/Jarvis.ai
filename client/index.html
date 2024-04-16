@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jarvis.ai</title>
+    <meta name="description" content="jarvis is a website to help purchase and tune GPUs">
+    <meta name="theme-color" content="FF0000">
+    <meta name="keywords" content="jarvis, GPUs, knowledge, inspiration">
+    <meta name="author" content="Donny & Jacob">
+    <title>Jarvis</title>
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/client/index.css">
     <script src="/client/index.js" defer></script>
     <script src="https://kit.fontawesome.com/c1b15e9f35.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/assets/jarvis.png">
 </head>
+
+
+
+
+
 <body>
         <div id="background">
             <div id="blur-overlay"></div>
@@ -378,6 +388,25 @@
         <p class="footer-p">Intensely Remote in the United States</p>
         <p>@ 2024 Jarvis.ai, inc. All Rights Reserved.</p>
     </footer>
+
+
+
+
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('serviceworker.js')
+              .then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+              })
+              .catch(error => {
+                console.error('Service Worker registration failed:', error);
+              });
+          });
+        }
+      </script>
 </body>
 </html>
 
