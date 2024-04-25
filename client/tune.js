@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     let hamMenu = document.querySelector('.ham-menu');
+    let navBar = document.querySelector('.tune-header-left-a');
 
 hamMenu.addEventListener('click' , () => {
-    let navBar = document.querySelector('.tune-header-left-a');
+    
     navBar.classList.toggle('active');
     hamMenu.classList.toggle('active');
 });
