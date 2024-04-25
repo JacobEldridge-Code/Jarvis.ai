@@ -114,6 +114,46 @@ header {
     transition: 0.6s ease-in-out;
   }
 
+.hamburger {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    display: none;
+  }
+
+.hamburger span {
+    height: 6px;
+    width: 100%;
+    background-color: #6f86ff;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+.hamburger span:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger span:nth-child(3) {
+    top: 75%;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
   
 
 
@@ -534,6 +574,7 @@ header {
     height: 100vh;
     overflow-y: auto;
     width: 15%;
+    
 }
 
 .scrollable-nav {
@@ -542,6 +583,7 @@ header {
     top: 0;
     height: 750px; 
     overflow-y: scroll; 
+    
 }
 
 nav li {
@@ -1538,8 +1580,8 @@ tr th:last-child {
 /* mobile device media query */
 @media only screen and (max-width: 600px) and (min-width: 360px) {
     header {
-        justify-content: space-evenly;
-        padding: 10px 0px;
+        justify-content: space-between;
+        padding: 10px 10px;
     }
     #background {
         background: #171B23;
@@ -1550,7 +1592,7 @@ tr th:last-child {
         width: 80px;
     }
     .header-middle {
-        padding-left: 120px;
+        padding-left: 0px;
     }
     .middle-btn {
         width: 150px;
@@ -1566,9 +1608,54 @@ tr th:last-child {
     .button-left {
         gap: 12px;
     }
+
     .header-right {
+        padding-top: 50%;
+        margin-right: 20px;
+        gap: 15px;
+        overflow: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -400px;
+        right: 0;
+        background-color: black;
+        height: 0;
+        text-align: center;
+        transition: .1s ease-in-out;
         display: none;
+        font-size: 26px;
     }
+
+    .header-right.active {
+        display: flex;
+        height: 100vh;
+        top: 0px;
+        gap: 35px;
+        padding-top: 0%;
+        z-index: 1000;
+        font-size: 26px;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 5px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 100%;
+        background-color: #6f86ff;
+        position: absolute;
+        border-radius: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+
     .landing-top {
         display: flex;
         flex-direction: column;
@@ -1889,7 +1976,7 @@ tr th:last-child {
         background-color: #1e293b;
         height: 9vh;
         width: 100%;
-    }
+    }  
     
     .ham-menu {
         display: block;
