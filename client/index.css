@@ -1071,7 +1071,7 @@ nav ul li a {
 #pricing {
     margin-top: 10rem;
     background: #171B23;
-    height: 275vh;
+    height: 240vh;
     width: 100%;
     padding: 0px 15px;
     display: flex;
@@ -2047,7 +2047,6 @@ tr th:last-child {
     width: fit-content;
     gap: 3rem;
     margin-top: 8rem;
-    border: 3px solid aqua;
     padding: 4px;
 }
 
@@ -2266,6 +2265,105 @@ tr th:last-child {
     color: rgb(183, 198, 225);
 }
 
+/* pricing section */
+
+#pricing {
+    background: #171B23;
+    height: 250vh;
+    width: 100vw;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 8rem;
+}
+
+#cpu-section{
+    display: none;
+}
+
+.pricing-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.cpu-section{
+    display: none;
+}
+
+.pricing-header h2 {
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.pricing-header p {
+    color: rgb(154, 166, 182);
+    font-size: 15px;
+    width: 80%;
+}
+
+.pricing-table {
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 30px 30px 0px 50px;
+}
+
+.pricing-table h2 {
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #91b4d245;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    color: white;
+    font-size: 15px;
+}
+
+td {
+    padding: 15px;
+    font-size: 13.5px;
+    color: rgb(166, 186, 212);
+}
+
+tr td:first-child {
+    text-align: left;
+}
+
+tr th:first-child {
+    text-align: left;
+}
+
+tr td:last-child {
+    text-align: left;
+}
+
+tr th:last-child {
+    text-align: left;
+}
+
+.pricing-right {
+    display: none;
+}
 
 
 
@@ -2501,7 +2599,8 @@ tr th:last-child {
     }
 
     .intro-left {
-        display: none;
+        display: block;
+        width: 30%;
     }
     .intro-right {
         display: none;
@@ -2653,6 +2752,15 @@ tr th:last-child {
     cursor: pointer;
 }
 
+/* pricing section */
+
+#pricing {
+    height: 200vh;
+}
+
+.pricing-right{
+    display: none;
+}
 }
 
 
