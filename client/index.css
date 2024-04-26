@@ -155,7 +155,9 @@ header {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
   
-
+.mesh {
+    background-color: #1e293b;
+}
 
 
 
