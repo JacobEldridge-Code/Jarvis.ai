@@ -2131,7 +2131,7 @@ tr th:last-child {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 345vh;
+    height: 350vh;
     width: fit-content;
     gap: 3rem;
     margin-top: 7rem;
