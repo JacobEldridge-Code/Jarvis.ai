@@ -1129,7 +1129,6 @@ nav ul li a {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    margin-top: 50px;
 }
 
 .pricing-header h2 {
@@ -1140,7 +1139,8 @@ nav ul li a {
 
 .pricing-header p {
     color: rgb(154, 166, 182);
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 1.2;
 }
 
 .pricing-header span {
@@ -2131,7 +2131,7 @@ tr th:last-child {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 340vh;
+    height: 345vh;
     width: fit-content;
     gap: 3rem;
     margin-top: 7rem;
@@ -2359,7 +2359,7 @@ tr th:last-child {
 
 #pricing {
     background: #171B23;
-    height: 250vh;
+    height: 260vh;
     width: 100vw;
     padding: 0px 15px;
     display: flex;
@@ -2380,6 +2380,7 @@ tr th:last-child {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin-top: 10rem;
 }
 
 .cpu-section{
@@ -2395,7 +2396,8 @@ tr th:last-child {
 .pricing-header p {
     color: rgb(154, 166, 182);
     font-size: 15px;
-    width: 80%;
+    width: 88%;
+    line-height: 1.4;
 }
 
 .pricing-table {
