@@ -1113,7 +1113,7 @@ nav ul li a {
 #pricing {
     margin-top: 10rem;
     background: #171B23;
-    height: 240vh;
+    height: 250vh;
     width: 100%;
     padding: 0px 15px;
     display: flex;
@@ -1129,6 +1129,7 @@ nav ul li a {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .pricing-header h2 {
@@ -2130,7 +2131,7 @@ tr th:last-child {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 320vh;
+    height: 340vh;
     width: fit-content;
     gap: 3rem;
     margin-top: 7rem;
@@ -2142,6 +2143,7 @@ tr th:last-child {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    margin-top: 30px;
 }
 
 .blog-header h2 {
