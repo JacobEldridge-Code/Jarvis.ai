@@ -2359,7 +2359,7 @@ tr th:last-child {
 
 #pricing {
     background: #171B23;
-    height: 260vh;
+    height: 300vh;
     width: 100vw;
     padding: 0px 15px;
     display: flex;
@@ -2380,7 +2380,7 @@ tr th:last-child {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .cpu-section{
