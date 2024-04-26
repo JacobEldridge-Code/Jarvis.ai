@@ -2130,7 +2130,7 @@ tr th:last-child {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 320vh;
+    height: 250vh;
     width: fit-content;
     gap: 3rem;
     margin-top: 7rem;
