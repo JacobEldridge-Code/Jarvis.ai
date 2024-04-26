@@ -1628,7 +1628,7 @@ tr th:last-child {
         text-align: center;
         transition: .1s ease-in-out;
         display: none;
-        font-size: 26px;
+
     }
 
     .header-right.active {
@@ -1638,8 +1638,22 @@ tr th:last-child {
         gap: 35px;
         padding-top: 0%;
         z-index: 1000;
-        font-size: 26px;
+
     }
+
+    .header-right.active a {
+        font-size: 36px; 
+    }
+
+    .header-right.active .get-started {
+        background-color: cyan;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 18px;
+        font-size: 22px;
+    }
+    
+
 
     .hamburger {
         display: block;
@@ -2002,8 +2016,8 @@ tr th:last-child {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
-        padding: 0px 0px;
+        gap: 0px;
+        padding-left: 20px;
     }
     
     .tune-header-left-a {
@@ -2036,7 +2050,7 @@ tr th:last-child {
     }
     
     .tune-header-icon {
-        width: 90px;
+        display: none;
         margin: 0;
         padding: 0;
     }
@@ -2055,8 +2069,8 @@ tr th:last-child {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
-        padding: 0px 10px;
+        gap: 0px;
+        padding: 10px 20px;
     }
     
     .tune-header-right img {
@@ -2071,18 +2085,7 @@ tr th:last-child {
     }
     
     .tune-header-right button {
-        font-size: 16px;
-        padding: 8px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: whitesmoke;
-        color: #1e293b;
-        transition: 0.15s ease-in-out;
-    }
-    
-    .tune-header-right button:hover {
-        background-color: darkgray;
-        color: black;
+        display: none;
     }
 
     #tune-main {
