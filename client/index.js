@@ -7,6 +7,7 @@ searchBar.addEventListener("focus" , () => {
 searchBar.addEventListener("blur" , () => {
     searchBorder.classList.remove("focused");
 });
+//searchbar border ends
 //searchbar toggle
 let searchButton = document.querySelector(".middle-btn");
 let searchMenu = document.getElementById("hidden-search-menu");
@@ -28,11 +29,13 @@ document.body.addEventListener("click", (event) => {
         blurOff.classList.remove("active");
     }
 });
+//searchbar toggle ends
 //blur effect
 let toggleBlur = () => {
     let blur = document.getElementById("blur-overlay");
     blur.classList.toggle("active");
 }
+//blur effect ends
 //group click event
 document.addEventListener("DOMContentLoaded", function() {
     let groups = document.querySelectorAll('.group');
@@ -55,6 +58,10 @@ hamMenu.addEventListener('click', () => {
 })
 
 
+
+
+
+
 //headers background changes color
 let className = "inverted";
 let scrollTrigger = 80;
@@ -66,4 +73,3 @@ window.onscroll = function() {
     document.getElementsByTagName("header")[0].classList.remove(className);
   }
 };
-
