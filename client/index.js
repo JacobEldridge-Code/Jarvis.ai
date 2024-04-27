@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //hamburger menu for main page
 
-const navBar = document.querySelector('.header-right')
-const hamMenu = document.querySelector('.hamburger')
+const navBar = document.querySelector('.header-right');
+const hamMenu = document.querySelector('.hamburger');
 
 hamMenu.addEventListener('click', () => {
-    navBar.classList.toggle('active')
-    hamMenu.classList.toggle('active')
+    navBar.classList.toggle('active');
+    hamMenu.classList.toggle('active');
 })
 
 
