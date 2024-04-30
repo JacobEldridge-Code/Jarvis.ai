@@ -1573,7 +1573,94 @@ tr th:last-child {
     padding-bottom: 30px;
 }
 
+/* sing up & login */
 
+
+.login {
+    height: 90vh;
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-border {
+    height: 80%;
+    width: 30%;
+    border: 3px solid gray;
+    background-color: white;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    margin-top: 40px;
+    color: black;
+    width: 100%;
+}
+
+.login-content p {
+    font-size: 22px;
+    color: #035fff;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    gap: 5px;
+    padding: 5px 80px;
+}
+
+.labels label {
+    font-size: 18px;
+}
+
+.labels span {
+    color: red;
+}
+
+.labels input {
+    width: 100%;
+    padding: 8px;
+}
+
+.labels button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px 5px;
+    background-color: #035fff;
+    border: #0dbfe7;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    font-size: 16px;
+}
+
+.labels button:hover {
+    background-color: #0dbfe7;
+}
+
+.blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+}
+.blue a {
+    color: #035fff;
+}
+
+.blue a:hover {
+    border-bottom: 1px;
+}
 
 
 
